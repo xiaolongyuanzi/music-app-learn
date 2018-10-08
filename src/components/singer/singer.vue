@@ -58,7 +58,7 @@
 						name:item.Fsinger_name
   				}))
   			})
-  			console.log(map)
+  			// console.log(map)
   			//得到有序列表，处理map的数据结构
   			let hot = []
   			let ret = []
@@ -83,4 +83,9 @@
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
+  .singer
+      position: fixed
+      top: 88px
+      bottom: 0
+      width: 100%
 </style>
