@@ -16,11 +16,14 @@
         </uL>
       </li>
     </ul>
-    <div class="list-shortcut" @touchstart.stop.prevent="onShortcutTouchStart" @touchmove.stop.prevent="onShortcutTouchMove"
-         @touchend.stop>
+    <div class="list-shortcut"
+          @touchstart.stop.prevent="onShortcutTouchStart"
+          @touchmove.stop.prevent="onShortcutTouchMove"
+          @touchend.stop>
       <ul>
-        <li v-for="(item, index) in shortcutList" :data-index="index" class="item"
-            :class="{'current':currentIndex===index}">{{item}}
+        <li v-for="(item, index) in shortcutList"
+        :data-index="index" class="item"
+        :class="{'current':currentIndex===index}">{{item}}
         </li>
       </ul>
     </div>
@@ -108,7 +111,7 @@
         for (let i = 0; i < list.length; i++) {
           let item = list[i]
           height += item.clientHeight
-          this.listHeight.push(height)
+          this.listHeight.push(height) //每个字母分组数据列表的高度数组
         }
       },
       _scrollTo(index) {
@@ -127,7 +130,7 @@
     watch: {
       data() {
         setTimeout(() => {
-          this._calculateHeight()
+          this._calculateHeight() //dom渲染好之后计算高度
         }, 20)
       },
       scrollY(newY) {

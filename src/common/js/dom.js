@@ -13,7 +13,7 @@ export function addClass(el, className) {
   el.className = newClass.join(' ')
   // el.classList.add(className)
 }
-
+// 获取元素索引，或者其他属性值
 export function getData(el, name, val) {
   const prefix = 'data-'
   if (val) {
